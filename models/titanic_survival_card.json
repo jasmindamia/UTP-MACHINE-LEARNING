@@ -1,0 +1,32 @@
+{
+    "model_name": "Titanic Survival Prediction",
+    "algorithm": "Logistic Regression",
+    "dataset": "Titanic",
+    "target": "Survived",
+    "features": [
+        "Pclass",
+        "Sex",
+        "Age",
+        "SibSp",
+        "Parch",
+        "Fare",
+        "Embarked"
+    ],
+    "best_parameters": {
+        "model__C": 1,
+        "model__class_weight": null
+    },
+    "cross_validation": {
+        "method": "StratifiedKFold",
+        "n_splits": 5,
+        "shuffle": true,
+        "random_state": 42,
+        "scoring": "roc_auc",
+        "best_mean_roc_auc": 0.8551333211952334
+    },
+    "test_metrics": {
+        "accuracy": 0.8044692737430168,
+        "roc_auc": 0.8437417654808959
+    },
+    "decision_threshold": 0.5
+}
